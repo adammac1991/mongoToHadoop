@@ -27,11 +27,11 @@ import org.bson.BSONObject;
  */
 public class MongoToAvro {
 	public static void main(String[] args ){
-		String startDate = args[0];
-		String endDate = args[1];
+		String startDate = args[1];
+		String endDate = args[2];
 		//Of form "mongodb://<username>:<password>@<host>:<Port>+.<dbName>.<collectionName>);"
-		String mongoURI = args[2];
-		String outputFilePath = args[3];
+		String mongoURI = args[3];
+		String outputFilePath = args[4];
 		
 		//Set Spark configuration and context
 		SparkConf conf = new SparkConf().setAppName("MongoToSpark-" + startDate);
